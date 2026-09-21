@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>DigitalOcean Agent Harness Runtime — Feature Showcase + Inference Demo</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <p id="preview-badge">🪐 M.A.R.S. — Public Preview launched Sept 22, 2026</p>
+    <h1><span id="ov-icon">🛰️</span> Agent Harness Runtime</h1>
+    <p id="ov-tagline">Loading…</p>
+    <p id="endpoint-badge">Loading endpoint info…</p>
+  </header>
+
+  <main>
+    <section id="overview-section">
+      <p id="ov-summary"></p>
+    </section>
+
+    <section id="catalog">
+      <h2>Features</h2>
+      <p class="hint">Click "View Demo" on any feature for a sample of what using it looks like (illustrative syntax, not a live call).</p>
+      <div id="features"></div>
+    </section>
+
+    <section id="ai-demo">
+      <h2>Try Serverless Inference</h2>
+      <p class="hint">Click "Generate Icon" on any feature above to load a prompt here, or type your own. Click "View Demo" on a feature to see a sample usage snippet inline.</p>
+      <div id="panels">
+        <div class="panel">
+          <h3>💬 Text — <code>/v1/chat/completions</code></h3>
+          <textarea id="chat-prompt" rows="3" placeholder="Ask about Agent Harness Runtime…">How does checkpoint and fork differ from pause/resume in Agent Harness Runtime?</textarea>
+          <button id="chat-btn">Send</button>
+          <div class="output" id="chat-output">Response will appear here.</div>
+          <div class="meta" id="chat-meta"></div>
+        </div>
+
+        <div class="panel">
+          <h3>🖼️ Image — <code>/v1/images/generations</code></h3>
+          <textarea id="image-prompt" rows="3" placeholder="Describe an icon or scene…">A clean, modern flat icon representing an isolated sandboxed AI agent session inside a microVM, ocean-blue palette, minimalist</textarea>
+          <select id="image-size">
+            <option value="1024x1024">1024x1024</option>
+            <option value="512x512">512x512</option>
+            <option value="256x256">256x256</option>
+          </select>
+          <button id="image-btn">Generate</button>
+          <div class="output" id="image-output">Image will appear here.</div>
+          <div class="meta" id="image-meta"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Agent Harness Runtime info compiled from internal DigitalOcean launch announcements (M.A.R.S. Public Preview,
+    Sept 22, 2026) — treat as internal reference content. Both AI panels above call the same
+    <code>MODEL_ACCESS_KEY</code> and <code>base_url</code> — only the model and endpoint path differ.
+  </footer>
+
+  <script src="/features-render.js"></script>
+  <script src="/script.js"></script>
+</body>
+</html>
