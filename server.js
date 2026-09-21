@@ -8,7 +8,7 @@ import OpenAI from "openai";
 import { OVERVIEW, FEATURES } from "./features.js";
 
 const MODEL_ACCESS_KEY = process.env.MODEL_ACCESS_KEY;
-const TEXT_MODEL = process.env.TEXT_MODEL || "llama3.3-70b-instruct";
+const TEXT_MODEL = process.env.TEXT_MODEL || "deepseek-4-flash";
 const IMAGE_MODEL = process.env.IMAGE_MODEL || "openai-gpt-image-1";
 const PORT = process.env.PORT || 8080;
 const BASE_URL = "https://inference.do-ai.run/v1";
